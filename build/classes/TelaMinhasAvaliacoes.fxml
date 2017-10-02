@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <BorderPane prefHeight="415.0" prefWidth="560.0">
+               <bottom>
+                  <TableView fx:id="tabelaAvaliacoes" prefHeight="390.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="colunaNome" maxWidth="119.0" minWidth="119.0" prefWidth="119.0" resizable="false" sortable="false" text="Nome" />
+                      <TableColumn fx:id="colunaDisciplina" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" sortable="false" text="Disciplina" />
+                        <TableColumn fx:id="colunaMedia" maxWidth="80.0" minWidth="80.0" resizable="false" sortable="false" text="Média" />
+                        <TableColumn fx:id="colunaPeso" maxWidth="79.0" minWidth="79.0" prefWidth="79.0" resizable="false" sortable="false" text="Peso" />
+                        <TableColumn fx:id="colunaNota" maxWidth="80.0" minWidth="80.0" resizable="false" sortable="false" text="Minha nota" />
+                    </columns>
+                  </TableView>
+               </bottom>
+               <left>
+                  <Button mnemonicParsing="false" onAction="#informarNota" prefHeight="30.0" prefWidth="200.0" text="Informar Nota" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </left>
+               <right>
+                  <Button mnemonicParsing="false" onAction="#novaAvaliacao" prefHeight="30.0" prefWidth="200.0" text="Adicionar Nova Avaliação" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </right>
+            </BorderPane>
+            <Button fx:id="voltar" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="100.0" text="Voltar">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
