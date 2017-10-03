@@ -1,6 +1,7 @@
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
@@ -40,10 +41,12 @@ public class TelaDesempenhoController extends InterfaceUsuario {
         this.desempenho.getData().clear();
         this.desempenho.setTitle("Desempenho");
         
-        double m1 = Avaliacao.calculaMediaDaDisciplina(this.disciplinas.getSelectionModel().getSelectedItem().toString(), "M1");
-        double m2 = Avaliacao.calculaMediaDaDisciplina(this.disciplinas.getSelectionModel().getSelectedItem().toString(), "M2");
-        double m3 = Avaliacao.calculaMediaDaDisciplina(this.disciplinas.getSelectionModel().getSelectedItem().toString(), "M3");
-        double mf = Avaliacao.calculaMediaDaDisciplina(this.disciplinas.getSelectionModel().getSelectedItem().toString(), "MF");
+        String disciplina = this.disciplinas.getSelectionModel().getSelectedItem().toString();
+        
+        double m1 = Avaliacao.calculaMediaDaDisciplina(disciplina, "M1");
+        double m2 = Avaliacao.calculaMediaDaDisciplina(disciplina, "M2");
+        double m3 = Avaliacao.calculaMediaDaDisciplina(disciplina, "M3");
+        double mf = Avaliacao.calculaMediaDaDisciplina(disciplina, "MF");
  
         XYChart.Series seriesM1 = new XYChart.Series();
         seriesM1.setName("M1("+String.format("%.2f", m1)+")");       
